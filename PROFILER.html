@@ -1,43 +1,96 @@
-<flowise-fullchatbot></flowise-fullchatbot>
-<script type="module">
-    import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
-    Chatbot.initFull({
-        chatflowid: "a84b28d2-f450-4ee1-99d1-dee0d7606a71",
-        apiHost: "https://flowise-i9l9.onrender.com",
-        theme: {
-            button: {
-                backgroundColor: '#f6f6f6',
-                right: 20,
-                bottom: 20,
-                size: 'medium',
-                iconColor: 'white',
-                title: "PROFILER",
-                customIconSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
-            },
-            chatWindow: {
-                welcomeMessage: "Who would you like me to profile?",
-                backgroundColor: "#ffffff",
-                fontSize: 16,
-                poweredByTextColor: "#ffffff",
-                botMessage: {
-                    backgroundColor: "#ffffff",
-                    textColor: "#000000",
-                    showAvatar: true,
-                    avatarSrc: "https://projectpatricia.retool.com/api/file/6ed0c3be-fde5-4c7e-9365-72bda49bbb13",
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Patricia: PROFILER</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .chatbot-wrapper {
+            width: 50%;
+            height: 75%;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .logo {
+            width: 100%;
+            border-bottom: 1px solid #ccc;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .logo img {
+            width: 100%;
+        }
+        .chatbot-container {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="chatbot-wrapper">
+        <div class="logo">
+            <img src="PPprofiler.png" alt="Patricia Project Logo">
+        </div>
+        <div class="chatbot-container">
+            <flowise-fullchatbot></flowise-fullchatbot>
+        </div>
+    </div>
+    <script type="module">
+        import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js";
+        Chatbot.initFull({
+            chatflowid: "a84b28d2-f450-4ee1-99d1-dee0d7606a71",
+            apiHost: "https://flowise-i9l9.onrender.com",
+            theme: {
+                button: {
+                    backgroundColor: '#f6f6f6',
+                    right: 20,
+                    bottom: 20,
+                    size: 'medium',
+                    title: "PUNDIT",
+                    iconColor: 'white',
+                    customIconSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
                 },
-                userMessage: {
-                    backgroundColor: "#000000",
-                    textColor: "#ffffff",
-                    showAvatar: true,
-                    avatarSrc: "https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/usericon.png",
-                },
-                textInput: {
-                    placeholder: "e.g. Write a biography of Xiomara Castro.  Please cite your sources as footnotes.",
+                chatWindow: {
+                    welcomeMessage: "Who would you like me to profile?",
                     backgroundColor: "#ffffff",
-                    textColor: "#000000",
-                    sendButtonColor: "#000000",
+                    fontSize: 16,
+                    poweredByTextColor: "#ffffff",
+                    botMessage: {
+                        backgroundColor: "#ffffff",
+                        textColor: "#000000",
+                        showAvatar: true,
+                        avatarSrc: "PPLogo.png",
+                    },
+                    userMessage: {
+                        backgroundColor: "#000000",
+                        textColor: "#ffffff",
+                        showAvatar: false,
+                        avatarSrc: "https://raw.githubusercontent.com/zahidkhawaja/langchain-chat-nextjs/main/public/usericon.png",
+                    },
+                    textInput: {
+                        placeholder: "e.g. Write a biography of Xiomara Castro.  Please cite your sources as footnotes.",
+                        backgroundColor: "#ffffff",
+                        textColor: "#000000",
+                        sendButtonColor: "#000000",
+                    },
+                    button: {
+                        backgroundColor: '#000000'
+                    }
                 }
             }
-        }
-    })
-</script>
+        });
+    </script>
+</body>
+</html>
